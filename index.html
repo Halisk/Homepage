@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+
+<html>    
+<head>
+    <title>Halisk's Homepage</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Homepage">
+    <meta name="description" content="Homepage about my achievements in web-programming">
+    <meta name="author" content="Halisk">
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.jpg">
+
+    <style>
+        body {
+            margin: 1cm;
+
+            background-image: url("images/hyperborea.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        h1 {
+            color: yellow;
+            text-shadow: -10px -1px 0 black;
+        }
+
+        nav {
+            display: flex;
+            justify-content: left;
+
+            border: 3px solid #FF000077;
+            background-color: rgba(200, 200, 0, 0.5)
+        }
+
+        footer {
+            margin-top: 10px;
+
+            display: flex;
+            justify-content: space-evenly;
+
+            border: 3px solid yellowgreen;
+            background-color: blueviolet;
+        }
+
+        article {
+            margin-top: 10px;
+            /*padding-left: 10px;*/
+            padding: 0% 10% 0% 10%;
+            border: 3px groove;
+            background-color: rgba(50, 200, 200, 0.8)
+        }
+
+        section {
+            padding: auto;
+        }
+
+        p {
+            text-indent: 0.5cm;
+        }
+
+        b {
+            font-family: Impact;
+        }
+
+        a {
+            color: red;
+        }
+
+        table, th, td {
+        border: 1px ridge whitesmoke;
+        background-color: darkgrey;
+        }
+
+        .navButton {
+            margin: 1%;
+
+            background-color: greenyellow;
+            border-style: hidden;
+            border-radius: 3px;
+        }
+
+        #trickButton {
+            margin: 5px;
+
+            background-color: black;
+            color: yellow;
+
+            border-style: dashed;
+            border-color: white;
+        }
+    </style>
+
+    <script>
+        function redirectToRickRoll() {
+        window.open("https://i.pinimg.com/736x/57/b8/45/57b8455ba12b277fa8ce849547706962.jpg", '_blank').focus();
+        }
+
+        function moveTo(c){
+            window.location.href = c;
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Sandbox for my HTML skills</h1>
+    </header>
+
+    <nav>
+        <!-- add onclick -->
+        <button class="navButton" onclick="moveTo('#ch1')">About page</button>
+        <button class="navButton" onclick="moveTo('#ch2')">About me</button>
+        <button class="navButton" onclick="moveTo('#ch3')">My creatiff</button>
+    </nav>
+
+    <main>
+        <article>            
+
+            <h2 id="ch1">About page</h2>
+            <p>
+                Hi and welcome to my <strong>Homepage</strong>!
+                <br>
+                I'm practicing doin here some Web things (HTML for now)
+                <hr>
+            </p>
+
+            <p>
+                It's not about selling image but it's 'bout <em>clear code</em> inside. That means ze real gem is in HTML code. Not the browser view
+            </p>
+
+            <img src="images/zamn.jpg" alt="zamn" style="float:right; width: 300px; height: 150px;">
+            <p>
+                I'm using informal english here 'cuz I'm gonna fleX my <b>MAD $KILLZ</b>
+            </p>
+
+            <p>
+                U can see next features here:
+            </p>
+            <ul>
+                <li>Semantic Elements</li>
+                <li>Internal CSS</li>
+                <li>Buttons</li>
+                <li>List which's mentioning List</li>
+                <li>And more...</li>
+            </ul>
+        </article>
+
+        <article>
+            <h2 id="ch2">About me</h2>
+            <h3>My personality</h3>
+            <p>
+                <del>Once upon a time</del> got u!  I'm 24 y.o. and I wanna be a cool proggerman sooo baad.
+                I bet u can't imagine. It's not about money but it's about a life goal. Remember Max Lavrov from TV show "Kitchen".
+                He says he knew he wouldn't be neither a mechanic nor a fireman. He should be a cook. Replace 'cook' to 'proggerman' 
+                and it would be all about me.
+            </p>
+
+            <p>
+                In fact, Im kinda the internet citizen. My professional growth and entertainment are all around the internet.
+                As modern fella I have some tricks to recognize AIslop. The main is:
+            </p>
+
+            <q>
+                Search for hyphen symbols in text sheets. Nobody uses NUMPAD to text it manually. I have to go. They are coming...
+            </q>
+
+            <p>
+                I'm into videogames indeed! The last achievements in there sounds like that. At First, I definitely understand <i title="Global strategy about 19th century">Victoria 2</i> economy aspect and I made the video guide about how to form Jugoslavia with <u title="Goverment cannot intervent into economy">Laissez-faire</u>.
+                The second one is I have special trait to recognize finnish folks in <i title="zoomer heroic shooter. It generates lots of fap content for PH">Overwatch</i> matches. I swear I don't know finnish but I see their nicknames and make right conclusions.
+                The funniest pre-battle chat was kinda that: 
+            </p>
+            <pre>
+(I see whole enemy team from Finland)
+me: sissalis sota suomi perkele :D
+enemy tank: get the fuck of from my Finland! (in finnish)
+me: 0_o
+            </pre>
+
+            <p>
+                I also can play simple music on harmonica and guitar. I used to make a videogame by Unity Engine but with no great idea I gave up.
+                Anyway I learnt some skills. For example, I can make cartoon animations (not 3D like Blender). I even make couple of music clips in my style! 
+                And the last one I have something in writting.
+            </p>
+            
+            <p>Sing together with this map (point to frames)!</p>
+            <img src="images/map.jpg" alt="3 frames with tooltip texts" usemap="#singmap">
+            <map name="singmap">
+                <area shape="rect" coords="0,0,200,200" title="А я бычоок подниму" alt="sig butt">
+                <area shape="rect" coords="200,0,400,200" title="Хорький дыым затянуу" alt="sour smoke">
+                <area shape="rect" coords="400,0,600,200" title="Покурю и полезуу домооой" alt="hatch">
+            </map>
+
+            <h3>My professional skills</h3>
+            <p>
+                I'm eager enumerate my skills with discription list:    
+            </p>
+            
+            <dl>
+                <dt>Common OOP with C#</dt>
+                <dd>that means I can make some kind of desktop applications if I have enough time tho</dd>
+
+                <dt>Basic Frontend</dt>
+                <dd>I mean I know how to make pages using HTML5 and CSS</dd>
+
+                <dt>Frameworks and libraries</dt>
+                <dd>I'm in common with some things that make it much easier to make a web-server, a telegram bot or make a simple query to DB</dd>
+
+                <dt>Determination</dt>
+                <dd>I've making my own pet-project since 2023! (Unfortunately it's not about the code but some general science)</dd>
+
+                <dt>Learning</dt>
+                <dd>I'm into learning. Especially if I can apply new skills in practice immediately</dd>
+            </dl>
+        </article>
+
+        <article style="display: flex; flex-direction: column;">
+            <h2 id="ch3">My creatiff</h2>
+            <p>Here we go. In this chapter I'm sharing with you my last arts or smth</p>
+
+            <section>
+                <h3>The world is yours</h3>
+                <img src="images/twiy_label.jpg" alt="label of the clip" style="float:left; width:300px; height:300px;">
+                <p>
+                    I made short music clip for one familiar girl. She extremely liked it! 
+                    I made this clip via Moho Pro and Vegas Pro. The clip splitted to very short scenes which I can handle to direct and produce. 
+                    The whole clip styled in Neon_dark_night_core or something. It's worth to see!
+                </p>
+
+                <p>
+                    Oh. Barely forgot it. The music. I used DEAD BLONDE's song <i>Не такая, как все</i>. The real 
+                    magic was when I managed to extra degrease the quality of sound. After that song started to sound like it old cold and nostlagic.
+                </p>
+            </section>
+            
+            <section>
+                <h3>Philatelist</h3>
+
+                <p>There is one of my short stories below. I wrote it last autumn. Enjoy!</p>
+
+                <img src="images/tale_label.jpg" alt="label of the story" style="float:left; width:300px; height:300px;">
+                <pre style="background-color: #777777AA;">
+- Пока ты там, ты сам за себя понял? Мы можем и не успеть.
+- За меня не беспокойтесь. Открывайте.
+Очередные ритуалы с дверью и психолог попал в хату. Ну хата как хата. Представляете, наверное, да?
+- Кто здесь Огниво?
+Пахан насторожился:
+- Я.
+- Меня зовут Дмитрий Костромской. Я вот с какой целью интересуюсь: как вы уже знаете, вы идете на УДО.
+Начальство выделило мое время, чтобы я мог помочь вам адаптироваться к жизни на воле. Психолог я.
+- Кто свободен, тому и за забором свобода.
+- Правильно. Но тут, понимаете, время меняется. Страна меняется. У нас политехническое образование в почете.
+Физика. Видели последние достижения Роскосмоса?
+- Не грузи.
+- Понимаю. Вы сами должны решить, нуждаетесь ли вы в моих услугах. Это не принудиловка.
+Скажете к вам не приходить, то и не буду.
+Психолог своим видом показал, что готов уйти. Это не бросалось в глаза. Профессиональная актерская игра.
+- Давай, выкладывай. Чё там ты хотел мне про физику рассказать.
+Психолог стал очень завораживающим слогом, буквально, стелить про физику. Скучные моменты опускал. Интересные усиливал.
+Где-то минут за 30 уже половину школьной программы было рассказано. И на моменте оптики остановимся подробнее.
+- ...таким образом свет – это частичка, мы его воспринимаем глазом как наблюдатель, вот и видим.
+- А кто такой наблюдатель?
+- Вы меня видите? Вы наблюдатель. И я вас вижу. И я наблюдатель.
+Вообще-то вся камера уже остановила свою рутину и внимательно слушала психолога. И один из них не удержался и спросил:
+- А фотон от петуха мы тоже видим глазом? - Ну да, иначе бы вы самого петуха не видели бы.
+Есть. Первый этап пройден. Информация усвоена. Дальше снова физика.
+После, пахан и психолог условились встретиться завтра в это же время. Психолог покинул камеру. Конвоиры отвели подальше, чтоб не было слышно. Психолог сказал:
+- Подсадной хорошо играет. Если вторую фразу вечером скажет как надо, то вашей проблемы как не бывало.
+На следующее утро психолога конвоиры сразу отвели к куму. Кум был немного растерян. Совсем немного. Вы бы этого даже не заметили.
+- Ну. Давай расскажи про свой план. Потом я скажу.
+Психолог слегка занервничал: лёгким касанием он поправил прядь, которой секунды назад вообще-то не было.
+- Как я и говорил до этого, мне надо было создать условия, в которых главный авторитет на вышей зоне потеряет свой статус,
+а вместе с ним и весь воровской закон канет в Лету.
+Короткий выдох.
+- Я договорился с одним из стукачей, чтоб он заострил внимание в моем рассказе про фотоны. А именно про петухов.
+После этого он должен был в спокойной обстановке задаться вопросом,
+а не зашквар ли это ловить глазом петушиные фотоны. Сегодня я планиру...
+- Довольно. Теперь я скажу. Твой мудреный план сработал. Сработал, мда...
+Явная растерянность.
+- Вчера вечером отбоя не было. Наш товарищ, так сказать, Огниво м-м-м... лишился своих регалий.
+После этого ночью на конях в другие хаты передали, что, оказывается, Огниво – не закон.
+Начались бунты. Ну вы знаете...
+Психолог внимательно слушал. Или делал вид...
+- Ближе к утру ситуация накалилась. Вызывали сиюминутчиков, так сказать...
+- Вы про солдат? Это их грузовики на КПП?
+- А. Так вы же все видели. Короче, всё. Нет здесь больше воровских законов. Это теперь красная зона, хе-хе.
+Вообще-то противный смешок. Кум продолжил:
+- Вы знаете, я думал вы, психологи, настоящие дармоеды. Которые занимаются только тем, что паразитируют на проблемах честнО‌го народа. А вы во-о-он чаво можете.
+- Ну да. Не зря же я 4 года учился Гегеля от Канта отлича...
+- Не выражаться при мне!
+                </pre>
+
+                <h4>Commentary</h4>
+                <p>
+                    The film 'Беспредел' quite thrilled me and I decided to make couple of references to it. And of course the idea about punk photon isn't mine. I've seen this punchline on <a href="https:/2ch.org" title="it isn't actually worth your time">2ch.org</a>
+                </p>
+            </section>
+            
+            <section>
+                <h3>Panslavic Balkanian Republic. Victoria 2 guide</h3>
+                <aside style="display: flex; justify-content: center;">
+                    <img src="images/guide_label.jpg" alt="guide lable" style="width: 300px; height: 300px;">
+                </aside>
+                <h4>Introduction</h4>
+
+                <aside style="float: right; background-color: yellow; border: 3px solid grey; text-align: center; padding: 0px 5px 5px 5px;">
+                    <h4><b style="color: red">ACHTUNG!</b></h4>
+                    The information below suits only for fatty sweaty nerds! Beware!
+                </aside>
+                
+                <p>
+                    Observe my <i>overmind</i> superior of command and strategy! It is a written type of my video guide.
+                    <br>
+                    You are better to be in common with Victoria 2 or you will understand nothing!
+                </p>
+
+                <h4>What make my guide special</h4>
+                <p>
+                    It is not so difficult to form Jugoslavia in Vic2. Some folks manage to do it just on Live. But there is a little detail. They forms Jugoslavia as kingdom with no options to do real democracy like USA. Only UK-style with HM's Goverment.
+                </p>
+                <p>
+                    I followed further. I made Jugoslavia as republic with free market at all. It was enough strong economy. Even my war plants were giving me positive income.
+                </p>
+
+                <h4>Is it possible</h4>
+                <p>
+                    Yeah. It is possible. Watch and learn.
+                </p>
+
+                <p>
+                    Kingdom Serbia starts as Absolute monarchy with Appointed conservative Upperhouse. The thing is Serbia have no people to Appoint to Upperhouse (no POPs: Aristocrats and Capitalists). That means the game forms your Upperhouse like it Only ruling party Politic. It is the main detail of my walkthrough. The second one is that you can liberate your Dictatorship's Upperhouse with Under pressure of Queen.
+                    I cannot properly explain all details here. Watch it by yourself!
+                </p>
+
+                <p>
+                    Oh... oh! There is some funny part there! There was era of social monarchy in 70s. Sounds like bruh
+                </p>
+
+                <h4 style="text-align: center;">Chronology table</h4>
+                <aside style="display: flex; justify-content: center;">
+                    <table style="margin-bottom: 10px;">
+                        <tr>
+                            <th>Stage</th>
+                            <th>Year</th>
+                            <th>Description</th>
+                        </tr>
+
+                        <tr>
+                            <td rowspan="4">Early game</td>
+                            <td>1836</td>
+                            <td>Making my first tip</td>
+                        </tr>
+
+                        <tr>
+                            <td>1840</td>
+                            <td>Ending first reforms. Becoming Prussian Constutialism Goverment</td>
+                        </tr>
+
+                        <tr>
+                            <td>1850</td>
+                            <td>Liberate some slavic territory of Ottoman Empire</td>
+                        </tr>
+
+                        <tr>
+                            <td>1860</td>
+                            <td>Becoming social monarchy</td>
+                        </tr>
+
+                        <tr>
+                            <td rowspan="3">Midgame</td>
+                            <td>1870</td>
+                            <td>Liberating all slavs of Ottoman Anarchy</td>
+                        </tr>
+
+                        <tr>
+                            <td>1880</td>
+                            <td>Liberating south slavs of Austrian Empire</td>
+                        </tr>
+
+                        <tr>
+                            <td>1885</td>
+                            <td>Beating the gready Italian Kingdom</td>
+                        </tr>
+
+                        <tr>
+                            <td rowspan="4">Lategame</td>
+                            <td>1890</td>
+                            <td>Becoming President Dictatorship</td>
+                        </tr>
+
+                        <tr>
+                            <td>1900</td>
+                            <td>Becoming Democracy</td>
+                        </tr>
+
+                        <tr>
+                            <td>1920</td>
+                            <td>Winning Revanchist War</td>
+                        </tr>
+
+                        <tr>
+                            <td>1926</td>
+                            <td>Making last save and finishing party</td>
+                        </tr>
+                    </table>
+                </aside>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <button class="navButton" onclick="moveTo('#ch1')">Back to the top</button>
+
+        <p>&copy; All rights reserved HOHO</p>
+
+        <button id="trickButton" title="U WON'T REGRET" onclick="redirectToRickRoll()" target="_blank">CLICK ME</button>
+        </footer>
+</body>
+</html>
+
