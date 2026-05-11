@@ -69,7 +69,7 @@
         }
 
         a {
-            color: red;
+            color: darkred;
         }
 
         table, th, td {
@@ -108,6 +108,13 @@
             aside {
                 display: flex;
                 justify-content: center;
+            }
+
+            footer {
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                align-items: center;
             }
             
             .label {
@@ -326,7 +333,7 @@ me: 0_o
 
                 <h4>Commentary</h4>
                 <p>
-                    The film 'Беспредел' quite thrilled me and I decided to make couple of references to it. And of course the idea about punk photon isn't mine. I've seen this punchline on <a href="https:/2ch.org" title="it isn't actually worth your time">2ch.org</a>
+                    The film 'Беспредел' quite thrilled me and I decided to make couple of references to it. And of course the idea about punk photon isn't mine. I've seen this punchline on <a href="https:/2ch.org" title="it isn't actually worth your time" target="_blank">2ch.org</a>
                 </p>
             </section>
             
@@ -443,12 +450,11 @@ me: 0_o
     </main>
 
     <footer>
-        <button class="navButton" onclick="moveTo('#ch1')">Back to the top</button>
-
+        <button class="navButton" onclick="moveTo('')">Back to the top</button>
+        <p>visit <a href="https://github.com/Halisk/Homepage" target="_blank">my gitHub</a></p>
         <p>&copy; All rights reserved HOHO</p>
-
         <button id="trickButton" title="U WON'T REGRET" onclick="redirectToRickRoll()" target="_blank">CLICK ME</button>
-        </footer>
+    </footer>
 </body>
 </html>
 
