@@ -1,1 +1,1 @@
-Download .zip file. Unzip it. Open html-page
+vizit https://halisk.github.io/Homepage/
