@@ -7,6 +7,7 @@
     <meta name="keywords" content="HTML, CSS, JavaScript, Homepage">
     <meta name="description" content="Homepage about my achievements in web-programming">
     <meta name="author" content="Halisk">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="icon" type="image/x-icon" href="images/favicon.jpg">
 
@@ -84,6 +85,15 @@
             border-radius: 3px;
         }
 
+        .label {
+            max-width: 300px;
+            max-height: 300px;
+            width: 100%;
+            height: 100%;
+
+            float: left;
+        }
+
         #trickButton {
             margin: 5px;
 
@@ -93,6 +103,23 @@
             border-style: dashed;
             border-color: white;
         }
+
+        @media (max-width: 767px) {
+            aside {
+                display: flex;
+                justify-content: center;
+            }
+            
+            .label {
+                float: none;
+                display: flex;
+                justify-content: center;
+            }
+
+            .hide-on-mobile {
+            display: none;
+        }
+}
     </style>
 
     <script>
@@ -133,7 +160,7 @@
                 It's not about selling image but it's 'bout <em>clear code</em> inside. That means ze real gem is in HTML code. Not the browser view
             </p>
 
-            <img src="images/zamn.jpg" alt="zamn" style="float:right; width: 300px; height: 150px;">
+            <img class="hide-on-mobile" src="images/zamn.jpg" alt="zamn" style="width: 300px; height: 150px; float: right;">
             <p>
                 I'm using informal english here 'cuz I'm gonna fleX my <b>MAD $KILLZ</b>
             </p>
@@ -146,6 +173,7 @@
                 <li>Internal CSS</li>
                 <li>Buttons</li>
                 <li>List which's mentioning List</li>
+                <li>Scaling</li>
                 <li>And more...</li>
             </ul>
         </article>
@@ -187,13 +215,15 @@ me: 0_o
                 And the last one I have something in writting.
             </p>
             
-            <p>Sing together with this map (point to frames)!</p>
-            <img src="images/map.jpg" alt="3 frames with tooltip texts" usemap="#singmap">
-            <map name="singmap">
+            <div class="hide-on-mobile">
+                <p>Sing together with this map (point to frames)!</p>
+                <img src="images/map.jpg" alt="3 frames with tooltip texts" usemap="#singmap">
+                <map name="singmap">
                 <area shape="rect" coords="0,0,200,200" title="А я бычоок подниму" alt="sig butt">
                 <area shape="rect" coords="200,0,400,200" title="Хорький дыым затянуу" alt="sour smoke">
                 <area shape="rect" coords="400,0,600,200" title="Покурю и полезуу домооой" alt="hatch">
             </map>
+            </div>
 
             <h3>My professional skills</h3>
             <p>
@@ -224,7 +254,10 @@ me: 0_o
 
             <section>
                 <h3>The world is yours</h3>
-                <img src="images/twiy_label.jpg" alt="label of the clip" style="float:left; width:300px; height:300px;">
+
+                <aside>
+                    <img  class="label" src="images/twiy_label.jpg" alt="label of the clip">
+                </aside>
                 <p>
                     I made short music clip for one familiar girl. She extremely liked it! 
                     I made this clip via Moho Pro and Vegas Pro. The clip splitted to very short scenes which I can handle to direct and produce. 
@@ -242,7 +275,9 @@ me: 0_o
 
                 <p>There is one of my short stories below. I wrote it last autumn. Enjoy!</p>
 
-                <img src="images/tale_label.jpg" alt="label of the story" style="float:left; width:300px; height:300px;">
+                <aside>
+                    <img class="label" src="images/tale_label.jpg" alt="label of the story">
+                </aside>
                 <pre style="background-color: #777777AA; white-space: pre-wrap;">
 - Пока ты там, ты сам за себя понял? Мы можем и не успеть.
 - За меня не беспокойтесь. Открывайте.
@@ -297,8 +332,8 @@ me: 0_o
             
             <section>
                 <h3>Panslavic Balkanian Republic. Victoria 2 guide</h3>
-                <aside style="display: flex; justify-content: center;">
-                    <img src="images/guide_label.jpg" alt="guide lable" style="width: 300px; height: 300px;">
+                <aside>
+                    <img class="label" src="images/guide_label.jpg" alt="guide lable">
                 </aside>
                 <h4>Introduction</h4>
 
