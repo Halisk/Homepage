@@ -90,6 +90,11 @@
             text-align: center;
         }
 
+        .centeredMedia {
+            display: flex;
+            justify-content: center;
+        }
+
         .navButton {
             margin: 1%;
 
@@ -110,6 +115,11 @@
         .sectionedArticle {
             display: flex;
             flex-direction: column;
+        }
+
+        .needsBarCanvas {
+            border:1px solid #000000;
+            background-color: white;
         }
 
         #zamnSideLabel {
@@ -173,6 +183,53 @@
 
         function moveTo(c){
             window.location.href = c;
+        }
+
+        function depictCurrentPromotingRate(val) {
+            document.getElementById("currentTaxRate").innerText = val + "%";
+
+            /*lifeNeeds dailyNeeds luxNeeds*/
+            var c1 = document.getElementById("lifeNeeds");
+            var ctx1 = c1.getContext("2d");
+
+            var c2 = document.getElementById("dailyNeeds");
+            var ctx2 = c2.getContext("2d");
+
+            var c3 = document.getElementById("luxNeeds");
+            var ctx3 = c3.getContext("2d");
+
+            ctx1.fillStyle = "yellow";
+            ctx2.fillStyle = "blue";
+            ctx3.fillStyle = "red";
+
+            /*
+            ctx.fillStyle = "red";
+            ctx.fillRect(0, 60-val, 20, val);
+            */
+            ctx1.clearRect(0, 0, 20, 60);
+            ctx2.clearRect(0, 0, 20, 60);
+            ctx3.clearRect(0, 0, 20, 60);
+
+            var inv = -val;
+    
+            if(val >= 40) {
+                ctx1.fillRect(0, 10, 20, 60);
+
+                document.getElementById("currentPromotingRate").innerText = "0% to promote (ur social mobility is corrupted!)";
+            }
+            if(val < 40) {
+                ctx1.fillRect(0, 0, 20, 60);
+                ctx2.fillRect(0, -inv, 20, 60+inv);
+
+                document.getElementById("currentPromotingRate").innerText = "5% to promote (as usual)";
+            }
+            if(val < 20) {
+                ctx1.fillRect(0, 0, 20, 60);
+                ctx2.fillRect(0, 0, 20, 60);
+                ctx3.fillRect(0, -inv+30, 20, inv+30);
+
+                document.getElementById("currentPromotingRate").innerText = "11% to promote (that's awesome!)";
+            }
         }
     </script>
 </head>
@@ -414,6 +471,13 @@ me: 0_o
                     Oh... oh! There is some funny part there! There was era of social monarchy in 70s. Sounds like bruh
                 </p>
 
+                <aside class="centeredMedia">
+                    <video width="640" height="480" controls>
+                        <source src="media/guide.mp4" type="video/mp4">
+                        Oopsie! U can't watch the video ma'te
+                    </video>
+                </aside>
+
                 <h4 class="centeredHeader">Chronology table</h4>
                 <aside id="tableAside">
                     <table>
@@ -482,6 +546,36 @@ me: 0_o
                         </tr>
                     </table>
                 </aside>
+            </section>
+        </article>
+
+        <article class="sectionedArticle">
+            <h2>Misc</h2>
+            <p>
+                I continue doin some things via HTML in this chapter.
+            </p>
+
+            <section>
+                <h3>POPs promoting</h3>
+                <p>
+                    Again Victoria 2. I present to you abstract model of POP social mobility below. I say it clearly we have high tax efficiency (able to up to 60%),
+                    low literacy (under 30%), high RGO output (with low taxes farmers can buy luxury goods) and no side hidden effects affect to social mobility (for example 'slavery flag').
+                    This model depicts relations between farmer POP needs and its promoting rate. That is essential due to high social mobility can solve sorts of your problems in game (from farmers to aristocrats for rich strata taxes or from farmers to soldiers in war quickly).
+                </p>
+
+                <form>
+                    <label for="taxrateRange">taxrate: 1%...60%</label><br>
+                    <input name="taxrateRange" id="taxrate" type="range" min="1" max="60" value="30" oninput="depictCurrentPromotingRate(this.value)">
+                    <span id="currentTaxRate">30%</span><br>
+                    <span id="currentPromotingRate">5% to promote (as usual)</span>
+                </form>
+
+                <!-- dailyNeeds LuxNeeds-->
+                <h4>LifeNeeds | DailyNeeds | LuxuryNeeds</h4>
+                <canvas id="lifeNeeds" class="needsBarCanvas" width="20" height="60"></canvas>
+                <canvas id="dailyNeeds" class="needsBarCanvas" width="20" height="60"></canvas>
+                <canvas id="luxNeeds" class="needsBarCanvas" width="20" height="60"></canvas>
+
             </section>
         </article>
     </main>
