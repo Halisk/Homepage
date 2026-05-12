@@ -13,7 +13,7 @@
 
     <style>
         body {
-            margin: 1cm;
+            margin: 3vw;
 
             background-image: url("images/hyperborea.jpg");
             background-repeat: no-repeat;
@@ -77,6 +77,19 @@
         background-color: darkgrey;
         }
 
+        pre {
+            white-space: pre-wrap;
+            background-color: #777777AA;
+        }
+
+        table {
+            margin-bottom: 10px;
+        }
+
+        .centeredHeader {
+            text-align: center;
+        }
+
         .navButton {
             margin: 1%;
 
@@ -92,6 +105,30 @@
             height: 100%;
 
             float: left;
+        }
+
+        .sectionedArticle {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #zamnSideLabel {
+            width: 300px;
+            height: 150px;
+            float: right;
+        }
+
+        #attentionWindow {
+            float: right;
+            background-color: yellow;
+            border: 3px solid grey;
+            text-align: center;
+            padding: 0px 5px 5px 5px;
+        }
+
+        #tableAside {
+            display: flex;
+            justify-content: center;
         }
 
         #trickButton {
@@ -167,7 +204,7 @@
                 It's not about selling image but it's 'bout <em>clear code</em> inside. That means ze real gem is in HTML code. Not the browser view
             </p>
 
-            <img class="hide-on-mobile" src="images/zamn.jpg" alt="zamn" style="width: 300px; height: 150px; float: right;">
+            <img class="hide-on-mobile" id="zamnSideLabel" src="images/zamn.jpg" alt="zamn">
             <p>
                 I'm using informal english here 'cuz I'm gonna fleX my <b>MAD $KILLZ</b>
             </p>
@@ -209,7 +246,7 @@
                 The second one is I have special trait to recognize finnish folks in <i title="zoomer heroic shooter. It generates lots of fap content for PH">Overwatch</i> matches. I swear I don't know finnish but I see their nicknames and make right conclusions.
                 The funniest pre-battle chat was kinda that: 
             </p>
-            <pre style="white-space: pre-wrap;">
+            <pre>
 (I see whole enemy team from Finland)
 me: sissalis sota suomi perkele :D
 enemy tank: get the fuck of from my Finland! (in finnish)
@@ -255,7 +292,7 @@ me: 0_o
             </dl>
         </article>
 
-        <article style="display: flex; flex-direction: column;">
+        <article class="sectionedArticle">
             <h2 id="ch3">My creatiff</h2>
             <p>Here we go. In this chapter I'm sharing with you my last arts or smth</p>
 
@@ -285,7 +322,7 @@ me: 0_o
                 <aside>
                     <img class="label" src="images/tale_label.jpg" alt="label of the story">
                 </aside>
-                <pre style="background-color: #777777AA; white-space: pre-wrap;">
+                <pre>
 - Пока ты там, ты сам за себя понял? Мы можем и не успеть.
 - За меня не беспокойтесь. Открывайте.
 Очередные ритуалы с дверью и психолог попал в хату. Ну хата как хата. Представляете, наверное, да?
@@ -344,7 +381,7 @@ me: 0_o
                 </aside>
                 <h4>Introduction</h4>
 
-                <aside style="float: right; background-color: yellow; border: 3px solid grey; text-align: center; padding: 0px 5px 5px 5px;">
+                <aside id="attentionWindow">
                     <h4><b style="color: red">ACHTUNG!</b></h4>
                     The information below suits only for fatty sweaty nerds! Beware!
                 </aside>
@@ -377,9 +414,9 @@ me: 0_o
                     Oh... oh! There is some funny part there! There was era of social monarchy in 70s. Sounds like bruh
                 </p>
 
-                <h4 style="text-align: center;">Chronology table</h4>
-                <aside style="display: flex; justify-content: center;">
-                    <table style="margin-bottom: 10px;">
+                <h4 class="centeredHeader">Chronology table</h4>
+                <aside id="tableAside">
+                    <table>
                         <tr>
                             <th>Stage</th>
                             <th>Year</th>
