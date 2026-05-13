@@ -213,20 +213,23 @@
             var inv = -val;
     
             if(val >= 40) {
-                ctx1.fillRect(0, 10, 20, 60);
+                ctx1.fillRect(0, val-40, 20, 60);
 
                 document.getElementById("currentPromotingRate").innerText = "0% to promote (ur social mobility is corrupted!)";
             }
             if(val < 40) {
+                var scale = Number((val-20)/2*5);
+
+
                 ctx1.fillRect(0, 0, 20, 60);
-                ctx2.fillRect(0, -inv, 20, 60+inv);
+                ctx2.fillRect(0, scale, 20, 60);
 
                 document.getElementById("currentPromotingRate").innerText = "5% to promote (as usual)";
             }
             if(val < 20) {
                 ctx1.fillRect(0, 0, 20, 60);
                 ctx2.fillRect(0, 0, 20, 60);
-                ctx3.fillRect(0, -inv+30, 20, inv+30);
+                ctx3.fillRect(0, 60 - (20 - val), 20, 20 - val);
 
                 document.getElementById("currentPromotingRate").innerText = "11% to promote (that's awesome!)";
             }
