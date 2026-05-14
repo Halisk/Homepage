@@ -180,7 +180,7 @@ button:hover {
 
     button, button:hover {
         padding: 5vw 0;
-        border: 5vw;
+        border-width: 2vw;
     }
 
     label {
