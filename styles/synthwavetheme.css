@@ -1,121 +1,91 @@
+aside, input {
+    display: none;
+}
+
+nav, address {
+    display: inherit;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+
+    height: 100%;
+    width: 100%;
+
+    font-size: 1vw;
+    font-family: 'Orbitron';
+}
+
 body {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content:space-between;
+    align-items: center;
+
     background-image: url("../media/wallpaperv3.gif");
     background-size:cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
 
-h1, p, label, button, a {
-    font-family: 'Orbitron';
-}
-
 h1 {
+    font-size: 3rem;
     text-align: center;
-    color: rgb(249, 24, 204);
     text-transform: uppercase;
-    text-shadow: 1px 10px rgba(178, 15, 253, 0.651), 2px 20px rgba(9, 1, 255, 0.185);
+
+    color: rgb(249, 24, 204);
+    text-shadow: 0.1vw 0.5vw rgba(178, 15, 253, 0.651), 0.2vw 1vw rgba(9, 1, 255, 0.185);
 }
 
 main {
-    margin-top: 5vw;
+    width: 30%;
+
+    display: flex;
+    flex-flow: column nowrap;
 }
 
+ul {
+    margin: 0;
+    padding: 0;
 
+    width: 100%;
 
-button {
-    text-transform: uppercase;
+    list-style-type: none;
 
-    margin: 1vw;
-
-    border: 1px solid rgb(42, 195, 0);
-    background-color: rgba(0, 0, 0, 0.493);
-    color: rgb(42, 195, 0);
-
-    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
 }
 
-button:hover {
-    background-color: rgba(0, 0, 0, 1);
-    border: 1px solid rgba(0, 0, 0, 0);
+li {
+    flex-grow: 1;
 }
 
 i {
+    text-align: center;
+
+    width: 100%;
+    height: 100%;
+
     color: blueviolet;
-    font-size: 5vw !important;
-
-    padding: 0px 5px 0px 5px;
-
+    font-size: 8rem !important;
     cursor: pointer;
 }
 
-footer {
-    bottom: 0;
-    left: 0;
+address {
     width: 100%;
-
-    margin: 1vw;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    
 }
 
-input {
-    display: none;
-}
-
-.material-icons {
-    font-size: 50px;
-}
-
-.labelM0 {
-    background-image: linear-gradient(135deg, #ff000094 0%, #ffffff42 50%);
-    text-align: center;
-}
-
-.labelM0:hover {
-
-    background-color: #ff000094;
-    text-align: center;
-}
-
-.labelM1 {
-    background-image: linear-gradient(35deg, #ffffff42 0%, #00e1ff94 50%);
-    text-align: center;
-}
-
-.labelM1:hover {
-
-    background-color: #00e1ff94;
-    text-align: center;
-}
-
-.hideOnMode0 {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: stretch;
-    
-    width: 100%;
-    max-width: 300px;
-
-    margin: 0 auto;
-
-    flex-wrap: wrap;
-}
 a {
-    font-size: 2vw;
+    margin: 0;
+    padding: 3vw 0;
 
     width: 100%;
-    min-width: 300px;
-    min-height: 100px;
-}
+    height: 100%;
 
-.hideOnMode1 {
-    display: none;
+    text-align: center;
+    font-size: 2rem;
 }
 
 #s1 {
@@ -133,6 +103,65 @@ a {
     color: rgb(0, 110, 255);
 }
 
+footer {
+    width: 30%;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: end;
+    align-items: stretch;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+
+    margin: 0.2vw 0;
+}
+
+label {
+    width: 50%;
+
+    display: flex;
+    justify-content: center;
+}
+
+#noCSSLabel {
+    background-image: linear-gradient(90deg, #ff000094 0%, #ffffff42 100%);
+}
+
+#noCSSLabel:hover {
+    background-color: #ff000094;
+}
+
+#SWCSSLabel {
+    background-image: linear-gradient(90deg, #ffffff42 0%, #00e1ff94 100%);
+}
+
+#SWCSSLabel:hover {
+    background-color: #00e1ff94;
+}
+
+button {
+    margin-bottom: 0.2vw;
+
+    font-size: inherit;
+    font-family: inherit;
+    text-transform: uppercase;
+
+    color: rgb(42, 195, 0);
+    background-color: rgba(0, 0, 0, 0.493);
+    border: 0.1vw solid rgb(42, 195, 0);        
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 1);
+    border: 0.1vw solid rgba(0, 0, 0, 0);
+}
+
+
+/*
 @media (max-width: 767px) {
     a {
         font-size: 25px;
@@ -143,19 +172,20 @@ a {
     }
 
     body {
-        /* 1. Центрируем картинку по горизонтали и вертикали */
+        /* 1. Центрируем картинку по горизонтали и вертикали /
         background-position: center center;
 
-        /* 2. Масштабируем: картинка растянется под экран без искажения пропорций */
+        /* 2. Масштабируем: картинка растянется под экран без искажения пропорций /
         background-size: cover;
 
-        /* 3. Запрещаем картинке размножаться (моститься плиткой) */
+        /* 3. Запрещаем картинке размножаться (моститься плиткой) /
         background-repeat: no-repeat;
 
-        /* 4. Привязываем фон к экрану (картинка не будет двигаться при скролле) */
+        /* 4. Привязываем фон к экрану (картинка не будет двигаться при скролле) /
         background-attachment: fixed;
         
-        /* Дополнительно: гарантируем, что body занимает всю высоту экрана смартфона */
+        /* Дополнительно: гарантируем, что body занимает всю высоту экрана смартфона /
         min-height: 100vh; 
     }
 }
+*/

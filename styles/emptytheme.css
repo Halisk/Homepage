@@ -1,7 +1,7 @@
-.hideOnMode0 {
-    display: none;
+aside {
+    display: block;
 }
 
-.hideOnMode1 {
-    display: block;
+nav, address {
+    display: none;
 }

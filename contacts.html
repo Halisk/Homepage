@@ -74,12 +74,21 @@
         </header>
         
         <main>
-            <p class="hideOnMode1">Switch to 'Cool CSS' for more info</p>
-            <address class="hideOnMode0">
-                <i class="material-icons" id="i1" onclick="showSlide('1')">chat</i>
-                <i class="material-icons" id="i2" onclick="showSlide('2')">person</i>
-                <i class="material-icons" id="i3" onclick="showSlide('3')">computer</i>
+            <aside>
+                <p>Switch to 'Cool CSS' for more info</p>
+            </aside>
 
+            <nav>
+                <ul>
+                    <li><i class="material-icons" id="i1" onclick="showSlide('1')">chat</i></li>
+                    <li><i class="material-icons" id="i2" onclick="showSlide('2')">person</i></li>
+                    <li><i class="material-icons" id="i3" onclick="showSlide('3')">computer</i></li>
+                </ul>
+            </nav>
+
+            <!--nav and address have different width!!!!-->
+
+            <address>
                 <a id="s1" href="tel:+79173902264">+7 (917) 319-22-64</a>
                 <a id="s2" href="https://vk.com/khalisk">my page on VK</a>
                 <a id="s3" href="https://github.com/Halisk">my profile on GitHub</a>
@@ -89,10 +98,10 @@
         <footer>
             <form>                
                 <input type="radio" id="noCSS" name="currentCSSMode" onchange="turnOnMode('0')" value="0" checked>
-                <label class="labelM0" for="noCSS">Boring no CSS</label>
+                <label id="noCSSLabel" for="noCSS">Boring no CSS</label>
 
                 <input type="radio" id="SWCSS" name="currentCSSMode" onchange="turnOnMode('1')" value="1">
-                <label class="labelM1"for="SWCSS">Cool SynthWave CSS</label>
+                <label id="SWCSSLabel" for="SWCSS">Cool SynthWave CSS</label>
             </form>
 
             <button id="goBackButton" onclick="javascript:history.back()">Back to previous page</button>
