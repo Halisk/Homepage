@@ -177,6 +177,10 @@
     </style>
 
     <script>
+        function redirectToContacts() {
+            window.open("contacts.html", '_self').focus();    
+        }
+
         function redirectToRickRoll() {
         window.open("https://i.pinimg.com/736x/57/b8/45/57b8455ba12b277fa8ce849547706962.jpg", '_blank').focus();
         }
@@ -247,6 +251,7 @@
         <button class="navButton" onclick="moveTo('#ch1')">About page</button>
         <button class="navButton" onclick="moveTo('#ch2')">About me</button>
         <button class="navButton" onclick="moveTo('#ch3')">My creatiff</button>
+        <button class="navButton" onclick="redirectToContacts()">Contacts</button>
     </nav>
 
     <main>
@@ -278,6 +283,7 @@
                 <li>Buttons</li>
                 <li>List which's mentioning List</li>
                 <li>Scaling</li>
+                <li>Model: Range-Canvas</li>
                 <li>And more...</li>
             </ul>
         </article>

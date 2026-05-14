@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<head>
+
+    <title>Halisk's Contacts</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="CSS, Contacts">
+    <meta name="description" content="My contacts">
+    <meta name="author" content="Halisk">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.jpg">
+
+    <link id="sheetMode" rel="stylesheet" href="styles/emptytheme.css">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+    <script>
+        function turnOnMode(mode) {
+            if(mode == 0) {
+                document.getElementById("sheetMode").href = "styles/emptytheme.css";
+            }
+            if(mode == 1) {
+                showSlide('1')
+
+                document.getElementById("sheetMode").href = "styles/synthwavetheme.css";
+            }
+        }
+
+        function showSlide(num){
+            if(num == 1){
+                document.getElementById("s2").style.display = "none";
+                document.getElementById("s3").style.display = "none";
+
+                document.getElementById("s1").style.display = "block";
+
+                document.getElementById("i2").style.backgroundColor = "#00000000";
+                document.getElementById("i3").style.backgroundColor = "#00000000";
+
+                document.getElementById("i1").style.backgroundColor = "#00e1ff94";
+
+            }
+            if(num == 2){
+                document.getElementById("s1").style.display = "none";
+                document.getElementById("s3").style.display = "none";
+
+                document.getElementById("s2").style.display = "block";
+
+                document.getElementById("i1").style.backgroundColor = "#00000000";
+                document.getElementById("i3").style.backgroundColor = "#00000000";
+
+                document.getElementById("i2").style.backgroundColor = "#00ff11a8";
+            }
+            if(num == 3){
+                document.getElementById("s1").style.display = "none";
+                document.getElementById("s2").style.display = "none";
+
+                document.getElementById("s3").style.display = "block";
+
+                document.getElementById("i1").style.backgroundColor = "#00000000";
+                document.getElementById("i2").style.backgroundColor = "#00000000";
+
+                document.getElementById("i3").style.backgroundColor = "#ff00008c";
+            }
+        }
+    </script>
+</head>
+
+<html>
+    <body>
+        <header>
+            <h1>My Contacts</h1>
+        </header>
+        
+        <main>
+            <p class="hideOnMode1">Switch to 'Cool CSS' for more info</p>
+            <address class="hideOnMode0">
+                <i class="material-icons" id="i1" onclick="showSlide('1')">chat</i>
+                <i class="material-icons" id="i2" onclick="showSlide('2')">person</i>
+                <i class="material-icons" id="i3" onclick="showSlide('3')">computer</i>
+
+                <a id="s1" href="tel:+79173902264">+7 (917) 319-22-64</a>
+                <a id="s2" href="https://vk.com/khalisk">my page on VK</a>
+                <a id="s3" href="https://github.com/Halisk">my profile on GitHub</a>
+            </address>
+        </main>
+
+        <footer>
+            <form>                
+                <input type="radio" id="noCSS" name="currentCSSMode" onchange="turnOnMode('0')" value="0" checked>
+                <label class="labelM0" for="noCSS">Boring no CSS</label>
+
+                <input type="radio" id="SWCSS" name="currentCSSMode" onchange="turnOnMode('1')" value="1">
+                <label class="labelM1"for="SWCSS">Cool SynthWave CSS</label>
+            </form>
+
+            <button id="goBackButton" onclick="javascript:history.back()">Back to previous page</button>
+        </footer>
+    </body>
+</html>
