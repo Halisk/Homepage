@@ -177,4 +177,13 @@ button:hover {
     main, footer {
         width: 100%;
     }
+
+    button, button:hover {
+        padding: 5vw 0;
+        border: 5vw;
+    }
+
+    label {
+        padding: 5vw 0;
+    }
 }
