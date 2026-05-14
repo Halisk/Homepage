@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 
 <head>
-
     <title>Halisk's Contacts</title>
     <meta charset="UTF-8">
     <meta name="keywords" content="CSS, Contacts">
@@ -16,6 +15,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 
+
     <script>
         function turnOnMode(mode) {
             if(mode == 0) {
@@ -26,6 +26,8 @@
 
                 document.getElementById("sheetMode").href = "styles/synthwavetheme.css";
             }
+
+            toggleJingle();
         }
 
         function showSlide(num){
@@ -62,6 +64,19 @@
                 document.getElementById("i2").style.backgroundColor = "#00000000";
 
                 document.getElementById("i3").style.backgroundColor = "#ff00008c";
+            }
+
+
+        }
+        
+        function toggleJingle(){
+            const jingle = document.getElementById("jingle");
+
+            if(jingle.paused){
+                jingle.play();
+
+            } else {
+                jingle.pause();
             }
         }
     </script>
@@ -106,5 +121,7 @@
 
             <button id="goBackButton" onclick="javascript:history.back()">Back to previous page</button>
         </footer>
+
+        <audio id="jingle" src="media/jingle.mp3"></audio>
     </body>
 </html>
