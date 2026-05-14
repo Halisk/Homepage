@@ -138,7 +138,7 @@ a {
         font-size: 25px;
     }
 
-    i {
+    i.material-icons {
         font-size: 150px !important;
     }
 }
