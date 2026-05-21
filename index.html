@@ -5,7 +5,7 @@
     <title>Halisk's Homepage</title>
     <meta charset="UTF-8">
     <meta name="keywords" content="HTML, CSS, JavaScript, Homepage">
-    <meta name="description" content="Homepage about my achievements in web-programming">
+    <meta name="description" content="Homepage about my achievements in web-programming || all media belong their authors">
     <meta name="author" content="Halisk">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -178,7 +178,10 @@
 
     <script>
         function redirectToContacts() {
-            window.open("contacts.html", '_self').focus();    
+            window.open("contacts.html", '_self').focus();
+        }
+        function redirectToGame() {
+            window.open("game.html", '_self').focus();
         }
 
         function redirectToRickRoll() {
@@ -252,6 +255,7 @@
         <button class="navButton" onclick="moveTo('#ch2')">About me</button>
         <button class="navButton" onclick="moveTo('#ch3')">My creatiff</button>
         <button class="navButton" onclick="redirectToContacts()">Contacts</button>
+        <button class="navButton" onclick="redirectToGame()">Game (NEW)</button>
     </nav>
 
     <main>
