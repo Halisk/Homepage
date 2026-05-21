@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<head>
+    <script src="scripts/dist/displayswitcher.js" defer></script>
+    <script src="scripts/dist/volumeswitcher.js" defer></script>
+    <script src="scripts/dist/introplayer.js" defer></script>
+
+    <script src="scripts/dist/gamecore.js" defer></script>
+    <script src="scripts/dist/scoremodule.js" defer></script>
+    <script src="scripts/dist/gunmodule.js" defer></script>
+    <script src="scripts/dist/screenmodule.js" defer></script>
+    <script src="scripts/dist/audiomodule.js" defer></script>
+    <script src="scripts/dist/enemymodule.js" defer></script>
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles/nostepback.css">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--
+        stop - .
+        ql - ?
+        comm - ,
+        excl - !
+    -->
+</head>
+
+<html>
+    <body>
+        <aside>
+            <form>
+                <input type="range" id="volume-changer" min="0" max="1" step="0.01" value="0.5" oninput="setSoundVolume(this.value)">
+                <label for="volume-changer"><i class="material-icons">volume_up</i></label>
+                <br>
+                <input type="range" id="music-changer" min="0" max="1" step="0.01" value="0.5" oninput="setMusicVolume(this.value)">
+                <label for="music-changer" ><i class="material-icons">audiotrack</i></label>
+            </form>
+
+            <article>
+                <nav>
+                    <ul>
+                        <li class="selected-tab" onclick="switchTab(this)">no step back</li>
+                        <li class="deselected-tab" onclick="switchTab(this)">controls</li>
+                        <li class="deselected-tab" onclick="switchTab(this)">about</li>
+                    </ul>
+                </nav>
+
+                <section class="selected-tab">
+                    <p>
+                        <i class="material-icons" onclick="turnOnIntro()">play_arrow</i><i class="material-icons" onclick="turnOffIntro()">pause</i>
+                        <br>
+                        tovaristch&nbsp;excl
+                        <br>
+                        german fascists treacherously crossed border and started war&nbsp;excl
+                        <br>
+                        you have maxim machine gun&nbsp;stop you must hold germans back as long as you can&nbsp;excl
+                        <br>
+                        no step back&nbsp;excl moscow is behind&nbsp;excl rodina will not forget you&nbsp;excl
+                        <br>
+                        <img src="images/toarms.png">
+                        <audio class="music" id="intro-speech" src="media/intro.mp3"></audio>
+                    </p>
+                </section>
+
+                <section class="deselected-tab">
+                    <p>
+                        space is fire
+                        <br>
+                        arrow left is shifting gun to left
+                        <br>
+                        arrow right is shifting gun to right
+                        <br>
+                        enter is start new game or terminate current game
+                        <br>
+                        <img src="images/maxim.png">
+                    </p>
+                </section>
+
+                <section class="deselected-tab">
+                    <p>
+                        attention
+                        <br>
+                        game works only on desktop
+                        <br><br>
+                        game made on typescript during compeleting w3schools ts guide by halisk
+                        <br>
+                        enjoy
+                        <br>
+                        <img src="images/march.png"> 
+                    </p>
+                </section>
+            </article>
+        </aside>
+
+        <main>
+            <canvas id="game-screen" width="512" height="384"></canvas>
+
+            <div id="hud">
+                <div>
+                    Score: <span id="score-val">0</span>
+                </div>
+                
+                <div>
+                    Barrel Overheating: <span id="heat-val">&nbsp;&nbsp;0</span>%
+                </div>
+            </div>
+
+            <div id="results">
+                <span id="conclusion-text"><br>press enter to start</span>
+            </div>
+        </main>
+    </body>
+</html>
